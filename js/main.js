@@ -6,7 +6,7 @@ Quando a pessoa errar, deixar na mensagem se o número chutado é maior ou menor
 */
 
 let secretNumber = parseInt(Math.random() * 11)
-let attempts = 3
+
 function kickNumber() {
   const enteredNumber = parseInt(document.querySelector('#value').value)
   console.log(enteredNumber)
@@ -14,7 +14,7 @@ function kickNumber() {
   const result = document.querySelector('.result')
   
   
-  do { if (
+  if (
     secretNumber !== enteredNumber &&
     secretNumber > enteredNumber &&
     secretNumber % 2 === 0
@@ -66,6 +66,6 @@ function kickNumber() {
     result.style.padding = '10px'
     result.style.borderRadius = '8px'
   } 
- } while (attempts <=3 )
+ 
   
 }
