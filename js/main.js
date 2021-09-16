@@ -12,8 +12,9 @@ function kickNumber() {
   console.log(enteredNumber)
 
   const result = document.querySelector('.result')
-
-  if (
+  let attempts = 3
+  
+  do { if (
     secretNumber !== enteredNumber &&
     secretNumber > enteredNumber &&
     secretNumber % 2 === 0
@@ -64,5 +65,7 @@ function kickNumber() {
     result.style.color = 'black'
     result.style.padding = '10px'
     result.style.borderRadius = '8px'
-  }
+  } 
+ } while (attempts <=3 )
+  
 }
